@@ -1,7 +1,9 @@
-# udacity_cloud_mod04_lesson04
 
 
-### list Ec2 instaces based on the tag
+
+UdacityCloudMod04Lesson04Ex12
+
+-- list Ec2 instaces based on the tag
 
 aws ec2 describe-instances \
 \
@@ -9,7 +11,7 @@ aws ec2 describe-instances \
       --filters "Name=tag:Project,Values=UdacityCloudMod04Lesson04Ex12" \
       --output text >> inventory
 
-## run main palybooks
+-- run main palybooks
 
 ansible-playbook -i inventory main.yml
-ansible-playbook -i inventory main.yml --private-key ~/ssh-keys/key.pem
+ ansible-playbook -i inventory main.yml --private-key ~/ssh-keys/mod03Key.pem

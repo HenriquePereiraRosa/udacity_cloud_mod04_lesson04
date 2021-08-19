@@ -1,0 +1,12 @@
+---
+- name: Mod04 | Lesson04 | Exercise 12
+  hosts: all
+  user: ubuntu
+  vars:
+    authorized_key_list:
+      - name: root
+        authorized_keys:
+         - key: "{{ lookup('file', '~/ssh-keys/mod03Key.pem') }}"
+           state: present
+  roles:
+   - setup
