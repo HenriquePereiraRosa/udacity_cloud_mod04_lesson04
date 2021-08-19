@@ -7,6 +7,14 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Run aws configure
+          command: |
+            aws configure \
+              AKIAVLBCHOVVFMVLVBGY\
+              E1igplT15UlbLFr+QA1+KtLHikwAHqtkeTmCpEv0\
+              us-east-1 \
+              json
+      - run:
           name: Ensure backend infrastructure exist
           command: |
             aws cloudformation deploy \
